@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/khalishahnadhirah/Documents/GitHub/MySite && git add -A && git diff --cached --quiet || git commit -m \"auto: update $(git diff --cached --name-only | head -1)\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
